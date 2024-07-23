@@ -15,7 +15,7 @@
 - name: install erfSONAR
   script:
     incline: |
-      curl -s https://raw.githubusercontent.com/perfsonar/project/installation-script/install-perfsonar | sh -s - --repo staging testpoint
+      curl -s curl -s https://raw.githubusercontent.com/perfsonar/project/master/install-perfsonar | sudo sh -s -- --auto-updates --tunings testpoint
 
 
 # - name: perfSONAR installation script
