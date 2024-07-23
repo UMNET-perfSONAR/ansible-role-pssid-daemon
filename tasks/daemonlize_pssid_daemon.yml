@@ -11,14 +11,7 @@
 #   notify: 
 #     - Restart pssid-daemon
 
-- name: Reload systemd
-  systemd:
-    daemon_reload: yes
 
-- name: Restart pssid-daemon service
-  systemd:
-    name: pssid-daemon.service
-    state: restarted
 
 - name: Check status of pssid-daemon service
   systemd:
