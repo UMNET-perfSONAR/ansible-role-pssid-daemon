@@ -5,7 +5,7 @@
       local0.* /var/log/pssid.log
   notify: restart rsyslog
 
-  - name: restart rsyslog
-    systemd:
-      name: rsyslog
-      state: restarted
+- name: restart rsyslog
+  systemd:
+    name: rsyslog
+    state: restarted
