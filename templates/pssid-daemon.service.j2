@@ -1,0 +1,10 @@
+[Unit]
+Description=Pssid-Daemon
+
+[Service]
+Restart=always
+WorkingDirectory=/usr/bin/pssid/pssid-daemon
+ExecStart=/usr/bin/python3 pssid-daemon.py
+
+[Install]
+WantedBy=multi-user.target

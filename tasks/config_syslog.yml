@@ -1,0 +1,6 @@
+- name: Add local0.* /var/log/pssid.log to rsyslog.conf
+  blockinfile:
+    path: /etc/rsyslog.conf
+    block: |
+      local0.* /var/log/pssid.log
+  notify: restart rsyslog
