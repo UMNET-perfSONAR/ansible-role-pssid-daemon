@@ -6,6 +6,6 @@
   notify: restart rsyslog
 
   - name: restart rsyslog
-  systemd:
-    name: rsyslog
-    state: restarted
+    systemd:
+      name: rsyslog
+      state: restarted
