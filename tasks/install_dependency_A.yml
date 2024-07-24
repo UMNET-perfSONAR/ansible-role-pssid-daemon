@@ -32,4 +32,4 @@
 
 - name: Execute perfSONAR installation script
   command: /tmp/install-perfsonar --auto-updates --tunings testpoint
-  when: download_result.changed  # Execute only if the download was successful
+  when: download_result.changed and not download_result.failed
