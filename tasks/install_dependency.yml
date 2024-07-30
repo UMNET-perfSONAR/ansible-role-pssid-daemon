@@ -1,0 +1,23 @@
+- name: Install python3-pip
+  apt:
+    name: python3-pip
+    state: present
+
+- name: Install iw
+  apt:
+    name: iw
+    state: present
+
+- name: Install croniter Python package
+  pip:
+    name: croniter
+
+- name: Download perfSONAR installation script
+  get_url:
+    url: https://raw.githubusercontent.com/perfsonar/project/master/install-perfsonar
+    dest: /tmp/install-perfsonar
+    mode: 0755  # Ensure executable permissions
+
+- name: Execute perfSONAR installation script
+  command: /tmp/install-perfsonar --auto-updates --tunings testpoint
+  

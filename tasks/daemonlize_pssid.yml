@@ -1,0 +1,18 @@
+- name: Create systemd service file
+  template:
+    src: pssid-daemon.service.j2
+    dest: /etc/systemd/system/pssid-daemon.service
+  notify: 
+    - Reload systemd
+
+- name: Check status of pssid-daemon service
+  systemd:
+    name: pssid-daemon.service
+    state: started
+    enabled: yes
+  register: pssid_status
+
+- name: Enable pssid-daemon service at boot
+  systemd:
+    name: pssid-daemon.service
+    enabled: yes

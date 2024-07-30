@@ -1,0 +1,12 @@
+- name: Ensure installation directory exists
+  file:
+    path: /usr/bin/pssid 
+    state: directory
+    mode: 0755
+
+- name: Clone pssid daemon repository
+  git:
+    repo: "{{ git_repo_url }}"
+    dest: /usr/bin/pssid 
+    version: main
+

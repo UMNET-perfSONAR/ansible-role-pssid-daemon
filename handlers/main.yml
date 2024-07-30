@@ -1,0 +1,13 @@
+- name: Reload systemd
+  systemd:
+    daemon_reload: yes
+
+- name: Restart pssid-daemon service
+  systemd:
+    name: pssid-daemon.service
+    state: restarted
+
+- name: restart rsyslog
+  systemd:
+    name: rsyslog
+    state: restarted

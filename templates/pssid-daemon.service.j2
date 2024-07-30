@@ -1,0 +1,10 @@
+[Unit]
+Description=Pssid-Daemon
+
+[Service]
+Restart=always
+WorkingDirectory=/usr/bin/pssid
+ExecStart=/usr/bin/python3 pssid-daemon.py --hostname '198.111.226.184'
+
+[Install]
+WantedBy=multi-user.target
