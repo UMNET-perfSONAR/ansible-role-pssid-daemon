@@ -6,3 +6,8 @@
   systemd:
     name: pssid-daemon.service
     state: restarted
+
+- name: restart rsyslog
+  systemd:
+    name: rsyslog
+    state: restarted
