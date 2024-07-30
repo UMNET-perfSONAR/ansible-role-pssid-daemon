@@ -5,24 +5,12 @@
   notify: 
     - Reload systemd
 
-# - name: Reload systemd
-#   systemd:
-#     daemon_reexec: yes
-#   notify: 
-#     - Restart pssid-daemon
-
-
-
 - name: Check status of pssid-daemon service
   systemd:
     name: pssid-daemon.service
     state: started
     enabled: yes
   register: pssid_status
-
-- name: Print pssid-daemon service status
-  debug:
-    msg: "pssid-daemon service status: {{ pssid_status }}"
 
 - name: Enable pssid-daemon service at boot
   systemd:

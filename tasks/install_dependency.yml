@@ -12,16 +12,6 @@
   pip:
     name: croniter
 
-# - name: install erfSONAR
-#   script:
-#     incline: |
-#       curl -s curl -s https://raw.githubusercontent.com/perfsonar/project/master/install-perfsonar | sudo sh -s -- --auto-updates --tunings testpoint
-
-
-# - name: perfSONAR installation script
-#   # shell: curl -s https://raw.githubusercontent.com/perfsonar/project/master/install-perfsonar | sudo sh -s -- --auto-updates --tunings testpoint
-#   shell: curl -s https://raw.githubusercontent.com/perfsonar/project/installation-script/install-perfsonar | sh -s - --repo staging testpoint
-
 - name: Download perfSONAR installation script
   get_url:
     url: https://raw.githubusercontent.com/perfsonar/project/master/install-perfsonar

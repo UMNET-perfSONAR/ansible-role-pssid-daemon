@@ -1,7 +1,6 @@
 ---
 - import_tasks: install_pssid_daemon.yml
-# - import_tasks: tasks/intall_pssid_dependencies.yml
-- import_tasks: install_dependency_A.yml
-- import_tasks: daemonlize_pssid_daemon.yml
+- import_tasks: install_dependency.yml
+- import_tasks: daemonlize_pssid.yml
 - import_tasks: config_syslog.yml
 
