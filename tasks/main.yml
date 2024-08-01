@@ -1,6 +1,8 @@
 ---
 - import_tasks: install_pssid_daemon.yml
 - import_tasks: install_dependency.yml
+- import_tasks: copy_pssid_config.yml
 - import_tasks: daemonlize_pssid.yml
 - import_tasks: config_syslog.yml
-
+# jq compatible issue fix, obsolete in future perfsonar version 5.2.0
+- import_tasks: jq_fix.yml

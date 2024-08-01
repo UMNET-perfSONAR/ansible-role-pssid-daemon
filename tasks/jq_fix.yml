@@ -1,0 +1,4 @@
+- name: Install jq version 1.6.0-1~bpo8+3
+  apt:
+    name: jq=1.6.0-1~bpo8+3
+    state: present

@@ -1,0 +1,10 @@
+- name: Ensure config file destination directory exists
+  file:
+    path: /etc/pssid
+    state: directory
+    mode: '0755'
+
+- name: Copy pssid config file to targeted node
+  copy:
+    src: /var/lib/pssid/output/pssid_config.json
+    dest: /etc/pssid/pssid_config.json
