@@ -6,5 +6,5 @@
 
 - name: Copy pssid config file to targeted node
   copy:
-    src: pssid_config.json
+    src: {{inventory_dir}}/../files/pssid_config.json
     dest: /etc/pssid/pssid_config.json
